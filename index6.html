@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Питання про кількість років</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .modal {
+      background-color: #fff;
+      width: 300px;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      color: #333;
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="modal">
+    <h1>Будь ласка, введіть ваш вік:</h1>
+    <input type="number" id="ageInput" min="1" required>
+    <button onclick="checkAge()">Відправити</button>
+  </div>
+
+  <script>
+    function checkAge() {
+      var ageInput = document.getElementById("ageInput");
+      var age = parseInt(ageInput.value);
+
+      if (age >= 18) {
+        window.location.href = "index.html";
+      } else {
+        alert("Ви не досягли повнолітнього віку.");
+      }
+    }
+  </script>
+</body>
+</html>
